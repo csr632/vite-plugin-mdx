@@ -1,4 +1,4 @@
-import { ensureEsbuildService } from 'vite'
+import { startService, Service } from 'esbuild'
 import { transformReactCode } from 'vite-plugin-react/dist/transform'
 import mdx from '@mdx-js/mdx'
 import type { Plugin } from 'vite'
@@ -65,4 +65,12 @@ export default defaultPlugin
 
 function ensureArray(value: any) {
   return Array.isArray(value) ? value : [value]
+}
+
+let _service: Service | undefined
+async function ensureEsbuildService() {
+  if (!_service) {
+    _service = await startService()
+  }
+  return _service
 }
