@@ -1,6 +1,4 @@
-# [WIP] vite-plugin-mdx
-
-[Pending upstream prs](https://github.com/csr632/vite-plugin-mdx/issues/1)
+# vite-plugin-mdx
 
 Provides [MDX](https://mdxjs.com/) Fast Refresh support for Vite.
 
