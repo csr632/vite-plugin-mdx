@@ -20,6 +20,7 @@ module.exports = {
 You can use any [mdx plugins](https://mdxjs.com/advanced/plugins) that you like:
 
 ```js
+// vite.config.js
 import { createPlugin } from 'vite-plugin-mdx'
 import react from 'vite-plugin-react'
 import remarkToc from 'remark-toc'
