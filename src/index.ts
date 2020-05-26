@@ -39,9 +39,19 @@ module.exports = {
           target: 'es2019',
           jsxFactory: 'mdx'
         })
+        const withoutHMR = `${DEFAULT_RENDERER}\n${js}`
+
+        if (
+          isBuild ||
+          path.startsWith(`/@modules/`) ||
+          process.env.NODE_ENV === 'production'
+        ) {
+          // do not transform for production builds
+          return withoutHMR
+        }
         // make mdx React component self-accepting
-        const result = transformReactCode(`${DEFAULT_RENDERER}\n${js}`, path)
-        return result
+        const withHMR = transformReactCode(withoutHMR, path)
+        return withHMR
       }
     }
   ]
