@@ -1,0 +1,25 @@
+{
+  "name": "basic",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite serve src --force",
+    "debug": "npx --node-arg=--inspect vite serve src --force",
+    "clean": "rm -rf node_modules/.vite_opt_cache",
+    "build": "vite build src --outDir dist"
+  },
+  "dependencies": {
+    "@mdx-js/react": "link:../../@mdx-js/react",
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "link:../../@mdx-js/mdx",
+    "vite": "link:../../vite",
+    "vite-plugin-react": "link:../../vite-plugin-react",
+    "vite-plugin-mdx": "link:../../"
+  }
+}
