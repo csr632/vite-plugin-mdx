@@ -1,4 +1,6 @@
-# vite-plugin-mdx
+# [WIP] vite-plugin-mdx
+
+[Pending upstream prs](https://github.com/csr632/vite-plugin-mdx/issues/1)
 
 Provides MDX Fast Refresh support for Vite.
 
