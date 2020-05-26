@@ -11,8 +11,5 @@ module.exports = {
     createPlugin({
       remarkPlugins: [remarkToc, remarkSlug]
     })
-  ],
-  rollupInputOptions: {
-    // external: ['@pika/react', '@pika/react-dom']
-  }
+  ]
 } as UserConfig

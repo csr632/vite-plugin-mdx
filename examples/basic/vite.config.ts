@@ -4,8 +4,5 @@ import react from 'vite-plugin-react'
 
 module.exports = {
   jsx: 'react',
-  plugins: [react, mdx],
-  rollupInputOptions: {
-    // external: ['@pika/react', '@pika/react-dom']
-  }
+  plugins: [react, mdx]
 } as UserConfig
