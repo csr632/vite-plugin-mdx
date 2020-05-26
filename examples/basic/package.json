@@ -12,15 +12,12 @@
     "build": "vite build src --outDir dist"
   },
   "dependencies": {
-    "@mdx-js/react": "link:../../@mdx-js/react",
     "@pika/react": "^16.13.1",
     "@pika/react-dom": "^16.13.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "vite-plugin-mdx": "^0.0.1"
   },
   "devDependencies": {
-    "@mdx-js/mdx": "link:../../@mdx-js/mdx",
-    "vite": "link:../../vite",
-    "vite-plugin-react": "link:../../vite-plugin-react",
-    "vite-plugin-mdx": "link:../../"
+    "vite": "^0.16.12"
   }
 }

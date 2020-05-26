@@ -1,43 +1,13 @@
 {
-  "name": "vite-plugin-mdx",
-  "version": "0.0.1",
-  "description": "Vite plugin for MDX",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
+  "name": "vite-plugin-mdx-workspace",
+  "private": true,
+  "workspaces": [
+    "package",
+    "examples/*"
   ],
-  "scripts": {
-    "dev": "tsc -w -p .",
-    "build": "rm -rf dist && tsc -p .",
-    "prepublishOnly": "yarn build"
-  },
-  "keywords": [
-    "vite",
-    "react",
-    "mdx",
-    "hmr"
-  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:csr632/vite-plugin-mdx.git",
   "author": "csr632",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/csr632/vite-plugin-mdx.git"
-  },
-  "bugs": {
-    "url": "https://github.com/csr632/vite-plugin-mdx/issues"
-  },
-  "homepage": "https://github.com/csr632/vite-plugin-mdx",
-  "peerDependencies": {
-    "vite": "^0.16.0",
-    "vite-plugin-react": "^1.1.2"
-  },
-  "devDependencies": {
-    "typescript": "^3.9.2",
-    "vite": "^0.16.0",
-    "vite-plugin-react": "^1.1.2"
-  },
-  "dependencies": {
-    "@mdx-js/mdx": "^1.6.4",
-    "@mdx-js/react": "^1.6.4"
-  }
+  "license": "MIT"
 }
