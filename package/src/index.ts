@@ -1,5 +1,5 @@
 import type { Plugin } from 'vite'
-import { transform } from './transform'
+import { transformMdx } from './transform'
 
 export function createPlugin(mdxOpts?: any) {
   return {
@@ -32,7 +32,7 @@ export function createPlugin(mdxOpts?: any) {
             path.startsWith(`/@modules/`) ||
             process.env.NODE_ENV === 'production'
           )
-          return transform({ code, mdxOpts, forHMR, path })
+          return transformMdx({ code, mdxOpts, forHMR, path })
         }
       }
     ]
@@ -46,4 +46,4 @@ function ensureArray(value: any) {
   return Array.isArray(value) ? value : [value]
 }
 
-export { transform }
+export { transformMdx }

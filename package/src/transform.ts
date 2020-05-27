@@ -7,7 +7,7 @@ import React from 'react'
 import { mdx } from '@mdx-js/react'
 `
 
-export async function transform({
+export async function transformMdx({
   code,
   mdxOpts,
   forHMR,
