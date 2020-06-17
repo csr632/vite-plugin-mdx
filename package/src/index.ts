@@ -1,23 +1,9 @@
 import type { Plugin } from 'vite'
+import remarkFrontmatter from 'remark-frontmatter'
 import { transformMdx } from './transform'
 
-export function createPlugin(mdxOpts?: any) {
+export function cleanCreatePlugin(mdxOpts?: any) {
   return {
-    configureServer: [
-      (ctx) => {
-        // make sure vite-plugin-react is applied
-        const vprConfigureServer = ensureArray(
-          require('vite-plugin-react').configureServer
-        )[0]
-        const vprIsApplied =
-          ensureArray(ctx.config.configureServer).indexOf(vprConfigureServer) >=
-          0
-        if (!vprIsApplied)
-          throw new Error(
-            'Can not detect vite-plugin-react. vite-plugin-mdx must be used with vite-plugin-react.'
-          )
-      }
-    ],
     transforms: [
       {
         test(path, query) {
@@ -39,11 +25,11 @@ export function createPlugin(mdxOpts?: any) {
   } as Plugin
 }
 
-const defaultPlugin = createPlugin()
-export default defaultPlugin
-
-function ensureArray(value: any) {
-  return Array.isArray(value) ? value : [value]
+export default function createPlugin(_mdxOpts?: any) {
+  let remarkPlugins: any[] = _mdxOpts?.remarkPlugins ?? []
+  // support frontmatter by default
+  remarkPlugins = [remarkFrontmatter, ...remarkPlugins]
+  return cleanCreatePlugin({ ..._mdxOpts, remarkPlugins })
 }
 
 export { transformMdx }

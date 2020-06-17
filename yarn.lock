@@ -242,7 +242,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
-"@mdx-js/mdx@^1.6.5":
+"@mdx-js/mdx@^1.6.4", "@mdx-js/mdx@^1.6.5":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.5.tgz#4e00ca5d38d678c6070d73819bb696e4030e2662"
   integrity sha512-DC13eeEM0Dv9OD+UVhyB69BlV29d2eoAmfiR/XdgNl4R7YmRNEPGRD3QvGUdRUDxYdJBHauMz5ZIV507cNXXaA==
@@ -267,7 +267,7 @@
     unist-builder "2.0.3"
     unist-util-visit "2.0.2"
 
-"@mdx-js/react@^1.6.5":
+"@mdx-js/react@^1.6.4", "@mdx-js/react@^1.6.5":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.5.tgz#70380f25209b62ef69349b7eef09fad7e1103824"
   integrity sha512-y1Yu9baw3KokFrs7g5RxHpJNSU4e1zk/5bAJX94yVATglG5HyAL0lYMySU8YzebXNE+fJJMCx9CuiQHy2ezoew==
@@ -312,6 +312,19 @@
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-12.0.0.tgz#e2f308ae6057499e0f413f878fff7c3a0fdc02a1"
   integrity sha512-8+mDQt1QUmN+4Y9D3yCG8AJNewuTSLYPJVzKKUZ+lGeQrI+bV12Tc5HCyt2WdlnG6ihIL/DPbKRJlB40DX40mw==
+  dependencies:
+    "@rollup/pluginutils" "^3.0.8"
+    commondir "^1.0.1"
+    estree-walker "^1.0.1"
+    glob "^7.1.2"
+    is-reference "^1.1.2"
+    magic-string "^0.25.2"
+    resolve "^1.11.0"
+
+"@rollup/plugin-commonjs@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-13.0.0.tgz#8a1d684ba6848afe8b9e3d85649d4b2f6f7217ec"
+  integrity sha512-Anxc3qgkAi7peAyesTqGYidG5GRim9jtg8xhmykNaZkImtvjA7Wsqep08D2mYsqw1IF7rA3lYfciLgzUSgRoqw==
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
     commondir "^1.0.1"
@@ -1236,6 +1249,13 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
+fault@^1.0.1:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/fault/-/fault-1.0.4.tgz#eafcfc0a6d214fc94601e170df29954a4f842f13"
+  integrity sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==
+  dependencies:
+    format "^0.2.0"
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -1249,6 +1269,11 @@ follow-redirects@^1.0.0:
   integrity sha512-KZm0V+ll8PfBrKwMzdo5D13b1bur9Iq9Zd/RMmAoQQcl2PxxFml8cxXPaaPYVbV0RjNjq1CU7zIzAOqtUPudmA==
   dependencies:
     debug "^3.0.0"
+
+format@^0.2.0:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
+  integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
 
 fresh@~0.5.2:
   version "0.5.2"
@@ -2370,6 +2395,13 @@ remark-footnotes@1.0.0:
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-1.0.0.tgz#9c7a97f9a89397858a50033373020b1ea2aad011"
   integrity sha512-X9Ncj4cj3/CIvLI2Z9IobHtVi8FVdUrdJkCNaL9kdX8ohfsi18DXHsCVd/A7ssARBdccdDb5ODnt62WuEWaM/g==
 
+remark-frontmatter@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-frontmatter/-/remark-frontmatter-2.0.0.tgz#c9b8539c27cd23b1672c7e0fcbd5795eeedb4dc1"
+  integrity sha512-uNOQt4tO14qBFWXenF0MLC4cqo3dv8qiHPGyjCl1rwOT0LomSHpcElbjjVh5CwzElInB38HD8aSRVugKQjeyHA==
+  dependencies:
+    fault "^1.0.1"
+
 remark-mdx@^1.6.5:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-1.6.5.tgz#a268b18fe8dbe23f2b7c8cf572264c7c0398e0d1"
@@ -2503,6 +2535,15 @@ rollup-plugin-vue@^6.0.0-beta.5:
   version "6.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-6.0.0-beta.5.tgz#d551382d727bb96c77cc84113d53647f0409aaa6"
   integrity sha512-WMcHnavgxB/5q8uYp5omlQeui23ICPzANQR/E2zyAXolsFNjY9S0icVPMy3fC0yiPvpKM065JouH76TgH6yj8g==
+  dependencies:
+    debug "^4.1.1"
+    hash-sum "^2.0.0"
+    rollup-pluginutils "^2.8.2"
+
+rollup-plugin-vue@^6.0.0-beta.6:
+  version "6.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-6.0.0-beta.6.tgz#e77dc9cdec9e53778f086259a89fbff36f391ddf"
+  integrity sha512-APbkp9EDk0Vj5PpZNaa11yyNhr/Uy8OkrzpkajxUvONU+S7+qqOSVlaNTcsxiT198dOC6TM0iJK5ChDgEVecTA==
   dependencies:
     debug "^4.1.1"
     hash-sum "^2.0.0"
@@ -2939,6 +2980,14 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
+vite-plugin-mdx@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-mdx/-/vite-plugin-mdx-0.0.1.tgz#5a5fce32597c2d3d459cc80fcb557541a7b853ee"
+  integrity sha512-LwFjY2aVaATz9M3Wth+q7I2cT+Gpw76N/8i1T8UDZhsRWV20yirA6ZCbuDl3CvBrnRVgZLzdbXiGsHYKjOiYLQ==
+  dependencies:
+    "@mdx-js/mdx" "^1.6.4"
+    "@mdx-js/react" "^1.6.4"
+
 vite-plugin-react@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vite-plugin-react/-/vite-plugin-react-2.0.3.tgz#783f31d4f6d25963ea07e2c4dfd7a826258bc777"
@@ -2994,6 +3043,59 @@ vite@^0.20.3:
     rollup-plugin-dynamic-import-variables "^1.0.1"
     rollup-plugin-terser "^5.3.0"
     rollup-plugin-vue "^6.0.0-beta.5"
+    selfsigned "^1.10.7"
+    slash "^3.0.0"
+    vue "^3.0.0-beta.14"
+    ws "^7.2.3"
+
+vite@^0.20.8:
+  version "0.20.8"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-0.20.8.tgz#dee70204b2c514cbae37e334cac56f2588791bba"
+  integrity sha512-ZqsDaEKp/rUBLAkOtz+avjFKbOhb38ewesvQmgePg/Y9RcJhmWUqF0cUovFqHNeVamDCdQNLI/kdQMjXg9o87g==
+  dependencies:
+    "@babel/parser" "^7.9.4"
+    "@rollup/plugin-commonjs" "^13.0.0"
+    "@rollup/plugin-json" "^4.0.3"
+    "@rollup/plugin-node-resolve" "^8.0.0"
+    "@types/koa" "^2.11.3"
+    "@types/lru-cache" "^5.1.0"
+    "@vue/compiler-dom" "^3.0.0-beta.14"
+    "@vue/compiler-sfc" "^3.0.0-beta.14"
+    brotli-size "^4.0.0"
+    chalk "^4.0.0"
+    chokidar "^3.3.1"
+    clean-css "^4.2.3"
+    debug "^4.1.1"
+    dotenv "^8.2.0"
+    es-module-lexer "^0.3.18"
+    esbuild "^0.4.1"
+    etag "^1.8.1"
+    execa "^4.0.1"
+    fs-extra "^9.0.0"
+    hash-sum "^2.0.0"
+    isbuiltin "^1.0.0"
+    koa "^2.11.0"
+    koa-conditional-get "^2.0.0"
+    koa-etag "^3.0.0"
+    koa-proxies "^0.11.0"
+    koa-send "^5.0.0"
+    koa-static "^5.0.0"
+    lru-cache "^5.1.1"
+    magic-string "^0.25.7"
+    merge-source-map "^1.1.0"
+    mime-types "^2.1.27"
+    minimist "^1.2.5"
+    open "^7.0.3"
+    ora "^4.0.4"
+    postcss "^7.0.28"
+    postcss-import "^12.0.1"
+    postcss-load-config "^2.1.0"
+    postcss-modules "^2.0.0"
+    resolve "^1.17.0"
+    rollup "^2.11.2"
+    rollup-plugin-dynamic-import-variables "^1.0.1"
+    rollup-plugin-terser "^5.3.0"
+    rollup-plugin-vue "^6.0.0-beta.6"
     selfsigned "^1.10.7"
     slash "^3.0.0"
     vue "^3.0.0-beta.14"
