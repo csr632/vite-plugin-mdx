@@ -1,5 +1,7 @@
 # vite-plugin-mdx
 
+**This plugin is moved into [vite-plugin-react-pages](https://github.com/vitejs/vite-plugin-react-pages/tree/master/packages/vite-plugin-mdx).**
+
 Provides [MDX](https://mdxjs.com/) Fast Refresh support for Vite.
 
 Note: This plugin should be used with `vite-plugin-react`.
